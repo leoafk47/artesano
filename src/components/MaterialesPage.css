@@ -1,0 +1,145 @@
+.materiales-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.materiales-container h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.materiales-grid {
+  display: grid;
+  /* CAMBIO: 40% para el formulario, 60% para la tabla */
+  grid-template-columns: 40% 60%; 
+  gap: 40px; 
+  text-align: left;
+}
+
+/* === COLUMNA CREACIÓN (IZQUIERDA) === */
+
+.columna-creacion p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.formulario-materiales {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+  font-size: 16px;
+}
+
+.boton-guardar {
+  padding: 12px;
+  background-color: #A0522D; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+/* === COLUMNA INVENTARIO (DERECHA) === */
+
+.columna-inventario h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tabla-materiales {
+  width: 100%;
+  border-collapse: collapse; 
+  font-size: 14px;
+  /* CAMBIO: Aseguramos que la tabla sea responsive horizontalmente si es necesario */
+  table-layout: fixed; 
+}
+
+.tabla-materiales th, .tabla-materiales td {
+  padding: 10px 10px; /* Reducimos el padding para ahorrar espacio */
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* CAMBIO: Color Marrón para el encabezado de la tabla */
+.tabla-materiales th {
+  background-color: #A0522D;
+  color: #fff; /* Texto blanco para contrastar */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tabla-materiales tbody tr:nth-child(even) {
+  background-color: #f7f7f7; 
+}
+
+/* Ajustes de ancho de columna para evitar que se dividan */
+.tabla-materiales th:nth-child(1), .tabla-materiales td:nth-child(1) { width: 25%; } /* Nombre */
+.tabla-materiales th:nth-child(2), .tabla-materiales td:nth-child(2) { width: 15%; } /* Precio */
+.tabla-materiales th:nth-child(3), .tabla-materiales td:nth-child(3) { width: 15%; } /* Gramos */
+.tabla-materiales th:nth-child(4), .tabla-materiales td:nth-child(4) { width: 15%; } /* Precio/grs */
+.tabla-materiales th:nth-child(5), .tabla-materiales td:nth-child(5) { width: 15%; text-align: center; } /* Acciones */
+
+
+/* Estilos para los botones de acción */
+.btn-accion {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 2px; /* Reducimos el margen entre botones */
+  padding: 5px;
+  color: #A0522D; 
+}
+
+.btn-accion:hover {
+  color: #58331f; 
+}
+/* Estilo para el botón de cancelar edición */
+.boton-cancelar {
+  padding: 12px;
+  background-color: #ccc; /* Gris */
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: -10px; /* Acercarlo al botón de guardar */
+  transition: background-color 0.2s;
+}
+
+.formulario-materiales {
+  /* Asegurar que los botones estén apilados en el formulario */
+  gap: 15px;
+}
